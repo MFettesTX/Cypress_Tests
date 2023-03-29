@@ -109,7 +109,7 @@
     "08-cleanup/resAdminRefundCancelStallsRVAddOns.spec.js",
     "08-cleanup/venueAdminSpecialRefund.spec.js",
     "08-cleanup/venueAdminRefundCancelAllReservations.spec.js",
-    "08-cleanup/venueAdminDeleteGroup.spec.js",
+    "08-cleanup/venueAdminDeleteGroup.spec.js",  
 
     "10-other regression/01-begin/venueAdminEditEvent-PAY-LATER-CC.spec.js",
     "10-other regression/01-begin/MFvenueAdminCreateEvent2DayMin-GROUPCODE-Custer.spec.js",
