@@ -1,3 +1,9 @@
+//This was to replace the cypress.json and used for the regression 
+//The env value was set to either development or staging depending on where they were run 
+//Grouping 06 was for an internal use-only login that we'd stopped using
+// but was eventually going to have its functionality changed and those tests 
+// were to be updated & added back to the batch
+
 {
   "chromeWebSecurity": false,
   "downloadsFolder": "cypress/downloads",
