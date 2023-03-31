@@ -88,32 +88,6 @@ Cypress.Commands.add('addRandomCardGroupLeader', () => {
         .click({ force: true });
     });
 });
-//import { getTestCreditCard } from '../utils/ccUtil';
-Cypress.Commands.add('addRandomCard', () => {
-  cy.getWithinIframe('[name="cardnumber"]', {
-    timeout: 5000
-  }).type(getTestCreditCard(), { force: true }); //Card Number field
-  //Card Number field
-  cy.get('[name="ccInformation.nameOnCard"]', { timeout: 5500 }) //Name on Card field
-    .focus()
-    .clear({ force: true })
-    .type('Automation ')
-    .type('Renter');
-  cy.get('[class="__PrivateStripeElement"]', { timeout: 5500 })
-    .eq(1)
-    .within(() => {
-      cy.getWithinIframe('[name="exp-date"]', { timeout: 5500 }).type('1232'); // EXP Date field
-    });
-  cy.get('[class="__PrivateStripeElement"]', { timeout: 5500 })
-    .eq(2)
-    .within(() => {
-      cy.getWithinIframe('[name="cvc"]', { timeout: 5500 }).type('9871'); // CVV field
-    });
-  cy.get('[name="ccInformation.zipCode"]', { timeout: 5500 })
-    .clear({ force: true })
-    .type('78701', { timeout: 5500 }); // ZIP CODE field
-  cy.get('[class*="switch MuiSwitch-sizeSmall"]', { timeout: 5500 }).click(); //SAVE CARD
-});
 Cypress.Commands.add('processCC', () => {
   cy.get('[class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputAdornedEnd MuiFilledInput-inputAdornedEnd"]').click({ force: true });
   cy.get('[class*="MuiFilledInput-inputAdornedEnd"]').click({ force: true });
