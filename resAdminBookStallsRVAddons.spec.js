@@ -5,7 +5,7 @@ const moment = require('moment')
 describe('Reservation Admin - Book Stalls, Spots and Add Ons', () => {
   before('Login', function() {
     cy.clearCookies()
-    // Login as venue admin
+    // Login as reservation admin
     cy.reservationAdminLogin(getConstants())
   })
   // **** THIS SECTION SETS THE DATES FROM CURRENT TO +x IN THE FUTURE ************
@@ -20,7 +20,7 @@ describe('Reservation Admin - Book Stalls, Spots and Add Ons', () => {
     cy.contains('CREATE NEW').click()
     cy.get('[name="renterInformation.email"]')
       .click()
-      .type('irmagerd')
+      .type('[REDACTED]')
     cy.contains('<REMOVED>').click()
     //Search for and select event
     cy.get('[id="mui-component-select-EVENT"]').click()
